@@ -4,6 +4,9 @@ target 'Arena Challenge' do
   use_frameworks!
 
   # Pods for Arena Challenge
+  pod 'Moya/RxSwift'
+  pod 'Moya-ModelMapper/RxSwift', '4.1.0'
+  pod 'RxCocoa'
 
   target 'Arena ChallengeTests' do
     inherit! :search_paths
