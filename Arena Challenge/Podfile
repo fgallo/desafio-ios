@@ -1,0 +1,18 @@
+platform :ios, '8.0'
+
+target 'Arena Challenge' do
+  use_frameworks!
+
+  # Pods for Arena Challenge
+
+  target 'Arena ChallengeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Arena ChallengeUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
