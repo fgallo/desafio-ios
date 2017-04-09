@@ -15,7 +15,6 @@ class RepositoriesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let startLoadingOffset: CGFloat = 20.0
-    private let refreshControl = UIRefreshControl()
     private let disposeBag = DisposeBag()
     
     var viewModel: RepositoriesViewModel! = RepositoriesViewModel(provider: GitHubProvider)
@@ -42,12 +41,9 @@ class RepositoriesViewController: UIViewController {
         tableView.estimatedRowHeight = 120.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(UINib.init(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
-        
-        refreshControl.addTarget(self, action: #selector(fetchRepositories), for: .valueChanged)
-        tableView.addSubview(refreshControl)
     }
     
-    func fetchRepositories() {
+    private func fetchRepositories() {
         let loadNextPageTrigger = tableView.rx.contentOffset.flatMap({ (offset) in
             self.isNearTheBottomEdge(contentOffset: offset, tableView: self.tableView) && !self.viewModel.allRepositoriesLoaded
                 ? Observable.just()
@@ -56,7 +52,6 @@ class RepositoriesViewController: UIViewController {
         
         viewModel.fetchRepositories(loadNextPageTrigger: loadNextPageTrigger)
             .drive(onNext: { repositories in
-                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)

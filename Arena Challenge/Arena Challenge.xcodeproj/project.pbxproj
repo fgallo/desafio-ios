@@ -19,6 +19,7 @@
 		A2AE36101E997FE70071EE19 /* RepositoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE360F1E997FE70071EE19 /* RepositoryCellViewModel.swift */; };
 		A2AE36121E99A6A40071EE19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36111E99A6A40071EE19 /* User.swift */; };
 		A2AE36151E99A9460071EE19 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36141E99A9460071EE19 /* UIColorExtensions.swift */; };
+		A2AE36171E9A02B00071EE19 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36161E9A02B00071EE19 /* UIImageViewExtensions.swift */; };
 		A2C7AD601E995B89009B26F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */; };
 		A2C7AD651E995B89009B26F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD631E995B89009B26F5 /* Main.storyboard */; };
 		A2C7AD671E995B89009B26F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD661E995B89009B26F5 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		A2AE360F1E997FE70071EE19 /* RepositoryCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModel.swift; sourceTree = "<group>"; };
 		A2AE36111E99A6A40071EE19 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A2AE36141E99A9460071EE19 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		A2AE36161E9A02B00071EE19 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		A2C7AD5C1E995B89009B26F5 /* Arena Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arena Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Arena Challenge/AppDelegate/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		A2C7AD641E995B89009B26F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A2AE36141E99A9460071EE19 /* UIColorExtensions.swift */,
+				A2AE36161E9A02B00071EE19 /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				A2AE36121E99A6A40071EE19 /* User.swift in Sources */,
 				A2AE36051E996AE50071EE19 /* RepositoriesViewModel.swift in Sources */,
 				A2AE36101E997FE70071EE19 /* RepositoryCellViewModel.swift in Sources */,
+				A2AE36171E9A02B00071EE19 /* UIImageViewExtensions.swift in Sources */,
 				A2C7AD601E995B89009B26F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
