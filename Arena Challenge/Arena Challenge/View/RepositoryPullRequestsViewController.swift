@@ -87,7 +87,9 @@ extension RepositoryPullRequestsViewController: UITableViewDataSource {
 extension RepositoryPullRequestsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let htmlURL = viewModel.pullRequestHtmlURLFor(indexPath: indexPath) {
+            UIApplication.shared.openURL(htmlURL)
+        }
     }
     
 }

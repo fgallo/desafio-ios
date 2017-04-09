@@ -49,8 +49,9 @@ class RepositoryPullRequestsViewModel {
         return PullRequestCellViewModel(pullRequest: pullRequests[indexPath.row])
     }
     
-    func pullRequestFor(indexPath: IndexPath) -> PullRequest {
-        return pullRequests[indexPath.row]
+    func pullRequestHtmlURLFor(indexPath: IndexPath) -> URL? {
+        let pullRequest = pullRequests[indexPath.row]
+        return URL(string: pullRequest.htmlUrl)
     }
     
     
