@@ -16,7 +16,7 @@ class RepositoriesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let progressHUD = MBProgressHUD()
-    private let startLoadingOffset: CGFloat = 20.0
+    private let startLoadingOffset: CGFloat = 30.0
     private let disposeBag = DisposeBag()
     
     var viewModel: RepositoriesViewModel!
