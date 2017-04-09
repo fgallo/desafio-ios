@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 import RxCocoa
 import RxSwift
 
@@ -14,6 +15,7 @@ class RepositoriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let progressHUD = MBProgressHUD()
     private let startLoadingOffset: CGFloat = 20.0
     private let disposeBag = DisposeBag()
     
@@ -33,6 +35,11 @@ class RepositoriesViewController: UIViewController {
     
     private func setupView() {
         title = viewModel.title
+        
+        viewModel.activityIndicator
+            .asObservable()
+            .bindTo(progressHUD.rx_mbprogresshud_animating)
+            .addDisposableTo(disposeBag)
         
         let backItem = UIBarButtonItem()
         backItem.title = ""

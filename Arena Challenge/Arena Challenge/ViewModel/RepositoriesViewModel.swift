@@ -18,8 +18,11 @@ class RepositoriesViewModel {
     let title = "GitHub JavaPop"
     
     private let provider: RxMoyaProvider<GitHubAPI>
+    private let fetchExecuting: Driver<Bool>
     private var page: Int
     private var repositories: [Repository]
+    
+    let activityIndicator: ActivityIndicator
     var allRepositoriesLoaded: Bool
     
     init(provider: RxMoyaProvider<GitHubAPI>) {
@@ -27,6 +30,10 @@ class RepositoriesViewModel {
         self.page = 1
         self.repositories = []
         self.allRepositoriesLoaded = false
+        self.activityIndicator = ActivityIndicator()
+        
+        fetchExecuting = activityIndicator
+            .asDriver()
     }
     
     
@@ -81,6 +88,7 @@ class RepositoriesViewModel {
     private func loadRepositories() -> Driver<[Repository]> {
         return provider
             .request(GitHubAPI.Repositories(language: "Java", sort: "stars", page: page))
+            .trackActivity(activityIndicator)
             .mapArray(type: Repository.self, keyPath: "items")
             .do(onNext: { repositories in
                 self.page += 1

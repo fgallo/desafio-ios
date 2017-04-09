@@ -16,8 +16,11 @@ import RxSwift
 class RepositoryPullRequestsViewModel {
     
     private let provider: RxMoyaProvider<GitHubAPI>
+    private let fetchExecuting: Driver<Bool>
     private let repository: Repository
     private var pullRequests: [PullRequest]
+    
+    let activityIndicator: ActivityIndicator
     var title: String
     
     init(provider: RxMoyaProvider<GitHubAPI>, repository: Repository) {
@@ -25,6 +28,10 @@ class RepositoryPullRequestsViewModel {
         self.repository = repository
         self.pullRequests = []
         self.title = repository.name
+        self.activityIndicator = ActivityIndicator()
+        
+        fetchExecuting = activityIndicator
+            .asDriver()
     }
     
     
@@ -52,6 +59,7 @@ class RepositoryPullRequestsViewModel {
     func fetchPullRequests() -> Driver<[PullRequest]> {
         return provider
             .request(GitHubAPI.PullRequests(user: repository.user.name, repository: repository.name))
+            .trackActivity(activityIndicator)
             .mapArray(type: PullRequest.self)
             .do(onNext: { pullRequests in
                 self.pullRequests.append(contentsOf: pullRequests)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 import RxCocoa
 import RxSwift
 
@@ -14,6 +15,7 @@ class RepositoryPullRequestsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let progressHUD = MBProgressHUD()
     private let disposeBag = DisposeBag()
     
     var viewModel: RepositoryPullRequestsViewModel!
@@ -32,6 +34,11 @@ class RepositoryPullRequestsViewController: UIViewController {
     
     private func setupView() {
         title = viewModel.title
+        
+        viewModel.activityIndicator
+            .asObservable()
+            .bindTo(progressHUD.rx_mbprogresshud_animating)
+            .addDisposableTo(disposeBag)
     }
     
     private func setupTableView() {
