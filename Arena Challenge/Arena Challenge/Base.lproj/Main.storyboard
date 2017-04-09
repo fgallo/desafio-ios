@@ -47,7 +47,7 @@
         <!--Repository Pull Requests View Controller-->
         <scene sceneID="xFc-sd-ruh">
             <objects>
-                <viewController storyboardIdentifier="RepositoryPullRequestsViewController" id="8UC-Ry-gS3" customClass="RepositoryPullRequestsViewController" customModule="Arena_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepositoryPullRequestsViewController" automaticallyAdjustsScrollViewInsets="NO" id="8UC-Ry-gS3" customClass="RepositoryPullRequestsViewController" customModule="Arena_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nOT-S4-V55"/>
                         <viewControllerLayoutGuide type="bottom" id="dUg-uG-CbT"/>
@@ -57,11 +57,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-dc-meh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="102.5" width="375" height="564.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="41" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2f-tq-q80">
+                                <rect key="frame" x="0.0" y="64" width="375" height="38.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 0 closed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnE-Q8-dpU">
+                                        <rect key="frame" x="187.5" y="12" width="56" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 opened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSB-1c-mBi">
+                                        <rect key="frame" x="130.5" y="12" width="53" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="0.87450980389999999" green="0.57647058819999997" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NnE-Q8-dpU" firstAttribute="top" secondItem="s2f-tq-q80" secondAttribute="top" constant="12" id="3cG-PH-HOL"/>
+                                    <constraint firstItem="NnE-Q8-dpU" firstAttribute="centerX" secondItem="s2f-tq-q80" secondAttribute="centerX" constant="28" id="7WK-fl-xHc"/>
+                                    <constraint firstAttribute="bottom" secondItem="NnE-Q8-dpU" secondAttribute="bottom" constant="12" id="Iv9-rh-KKL"/>
+                                    <constraint firstAttribute="bottom" secondItem="qSB-1c-mBi" secondAttribute="bottom" constant="12" id="aOR-gi-MgF"/>
+                                    <constraint firstItem="NnE-Q8-dpU" firstAttribute="leading" secondItem="qSB-1c-mBi" secondAttribute="trailing" constant="4" id="mTM-eb-dzr"/>
+                                    <constraint firstItem="qSB-1c-mBi" firstAttribute="top" secondItem="s2f-tq-q80" secondAttribute="top" constant="12" id="pcv-oO-TxT"/>
+                                </constraints>
+                            </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-AC-fdm">
-                                <rect key="frame" x="80.5" y="128" width="213.5" height="38"/>
+                                <rect key="frame" x="81" y="142.5" width="213.5" height="38"/>
                                 <string key="text">Não existem pull requests para
 esse repositório.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
@@ -71,16 +97,22 @@ esse repositório.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="q5E-dc-meh" firstAttribute="top" secondItem="s2f-tq-q80" secondAttribute="bottom" id="1Ns-dp-QKk"/>
+                            <constraint firstItem="0pI-AC-fdm" firstAttribute="top" secondItem="s2f-tq-q80" secondAttribute="bottom" constant="40" id="Djw-61-amY"/>
                             <constraint firstItem="q5E-dc-meh" firstAttribute="leading" secondItem="W06-Yy-3uP" secondAttribute="leading" id="Eqb-rj-yen"/>
                             <constraint firstItem="dUg-uG-CbT" firstAttribute="top" secondItem="q5E-dc-meh" secondAttribute="bottom" id="WO5-7x-Nqg"/>
-                            <constraint firstItem="q5E-dc-meh" firstAttribute="top" secondItem="W06-Yy-3uP" secondAttribute="top" id="fxS-lI-r2o"/>
+                            <constraint firstItem="s2f-tq-q80" firstAttribute="leading" secondItem="W06-Yy-3uP" secondAttribute="leading" id="eq1-pn-Rpa"/>
+                            <constraint firstItem="s2f-tq-q80" firstAttribute="top" secondItem="nOT-S4-V55" secondAttribute="bottom" id="fer-kd-d9l"/>
+                            <constraint firstAttribute="trailing" secondItem="s2f-tq-q80" secondAttribute="trailing" id="g2t-tm-XN8"/>
                             <constraint firstItem="0pI-AC-fdm" firstAttribute="centerX" secondItem="W06-Yy-3uP" secondAttribute="centerX" id="qha-2N-0dK"/>
                             <constraint firstAttribute="trailing" secondItem="q5E-dc-meh" secondAttribute="trailing" id="r0x-yk-xyj"/>
-                            <constraint firstItem="0pI-AC-fdm" firstAttribute="top" secondItem="nOT-S4-V55" secondAttribute="bottom" constant="64" id="yEF-LR-qA6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closedRequestsLabel" destination="NnE-Q8-dpU" id="Lsl-II-rJG"/>
+                        <outlet property="headerView" destination="s2f-tq-q80" id="nAj-zs-UAo"/>
                         <outlet property="messageLabel" destination="0pI-AC-fdm" id="0UJ-pS-pyv"/>
+                        <outlet property="openRequestsLabel" destination="qSB-1c-mBi" id="uet-gX-NEs"/>
                         <outlet property="tableView" destination="q5E-dc-meh" id="97i-NF-QTD"/>
                     </connections>
                 </viewController>

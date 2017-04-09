@@ -55,6 +55,24 @@ class RepositoryPullRequestsViewModel {
     }
     
     
+    // MARK: - Support Methods
+    
+    func numberOfPullRequestsState() -> (opened: Int, closed: Int) {
+        var opened = 0
+        var closed = 0
+        
+        for pullRequest in pullRequests {
+            if pullRequest.state == PullRequest.PullRequestState.open {
+                opened += 1
+            } else if pullRequest.state == PullRequest.PullRequestState.closed {
+                closed += 1
+            }
+        }
+        
+        return (opened, closed)
+    }
+    
+    
     // MARK: - API
     
     func fetchPullRequests() -> Driver<[PullRequest]> {

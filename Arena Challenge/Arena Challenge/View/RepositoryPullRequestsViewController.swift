@@ -14,6 +14,9 @@ import RxSwift
 class RepositoryPullRequestsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var openRequestsLabel: UILabel!
+    @IBOutlet weak var closedRequestsLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
     private let progressHUD = MBProgressHUD()
@@ -36,6 +39,8 @@ class RepositoryPullRequestsViewController: UIViewController {
     private func setupView() {
         title = viewModel.title
         
+        headerView.addDropShadow()
+        
         viewModel.activityIndicator
             .asObservable()
             .bindTo(progressHUD.rx_mbprogresshud_animating)
@@ -51,10 +56,17 @@ class RepositoryPullRequestsViewController: UIViewController {
         tableView.register(UINib.init(nibName: "PullRequestTableViewCell", bundle: nil), forCellReuseIdentifier: "PullRequestCell")
     }
     
+    private func setupPullRequestsState() {
+        let numberOfStates = viewModel.numberOfPullRequestsState()
+        openRequestsLabel.text = "\(numberOfStates.opened) opened"
+        closedRequestsLabel.text = "/ \(numberOfStates.closed) closed"
+    }
+    
     private func fetchPullRequests() {
         viewModel.fetchPullRequests()
             .drive(onNext: { pullRequests in
                 self.tableView.reloadData()
+                self.setupPullRequestsState()
                 self.messageLabel.isHidden = !(pullRequests.count == 0)
                 self.tableView.isHidden = pullRequests.count == 0
                 self.tableView.separatorStyle = .singleLine

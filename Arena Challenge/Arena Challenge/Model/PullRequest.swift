@@ -15,12 +15,19 @@ struct PullRequest: Mappable {
     let description: String?
     let date: String
     let user: User
+    let state: PullRequestState
+    
+    enum PullRequestState: String{
+        case open = "open"
+        case closed = "closed"
+    }
     
     init(map: Mapper) throws {
         try title = map.from("title")
         try htmlUrl = map.from("html_url")
         try date = map.from("created_at")
         try user = map.from("user")
+        try state = map.from("state")
         description = map.optionalFrom("body")
     }
     
