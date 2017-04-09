@@ -30,11 +30,13 @@
 		A2AE36281E9A0C0B0071EE19 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36271E9A0C0B0071EE19 /* SegueIdentifiers.swift */; };
 		A2AE362A1E9A98F20071EE19 /* MBProgressHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36291E9A98F20071EE19 /* MBProgressHUDExtensions.swift */; };
 		A2AE362E1E9A9D1C0071EE19 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE362D1E9A9D1C0071EE19 /* ActivityIndicator.swift */; };
+		A2AE36301E9AA98C0071EE19 /* RepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE362F1E9AA98C0071EE19 /* RepositoriesViewModelTests.swift */; };
+		A2AE36341E9ACC260071EE19 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AE36331E9ACC260071EE19 /* Repositories.json */; };
+		A2AE36361E9AD2680071EE19 /* PullRequests.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AE36351E9AD2680071EE19 /* PullRequests.json */; };
 		A2C7AD601E995B89009B26F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */; };
 		A2C7AD651E995B89009B26F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD631E995B89009B26F5 /* Main.storyboard */; };
 		A2C7AD671E995B89009B26F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD661E995B89009B26F5 /* Assets.xcassets */; };
 		A2C7AD6A1E995B89009B26F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD681E995B89009B26F5 /* LaunchScreen.storyboard */; };
-		A2C7AD751E995B89009B26F5 /* Arena_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AD741E995B89009B26F5 /* Arena_ChallengeTests.swift */; };
 		A2C7AD801E995B89009B26F5 /* Arena_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AD7F1E995B89009B26F5 /* Arena_ChallengeUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,9 @@
 		A2AE36271E9A0C0B0071EE19 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		A2AE36291E9A98F20071EE19 /* MBProgressHUDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUDExtensions.swift; sourceTree = "<group>"; };
 		A2AE362D1E9A9D1C0071EE19 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		A2AE362F1E9AA98C0071EE19 /* RepositoriesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelTests.swift; sourceTree = "<group>"; };
+		A2AE36331E9ACC260071EE19 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repositories.json; sourceTree = "<group>"; };
+		A2AE36351E9AD2680071EE19 /* PullRequests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PullRequests.json; sourceTree = "<group>"; };
 		A2C7AD5C1E995B89009B26F5 /* Arena Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arena Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Arena Challenge/AppDelegate/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		A2C7AD641E995B89009B26F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,7 +94,6 @@
 		A2C7AD691E995B89009B26F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2C7AD6B1E995B89009B26F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C7AD701E995B89009B26F5 /* Arena ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arena ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2C7AD741E995B89009B26F5 /* Arena_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena_ChallengeTests.swift; sourceTree = "<group>"; };
 		A2C7AD761E995B89009B26F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C7AD7B1E995B89009B26F5 /* Arena ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arena ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C7AD7F1E995B89009B26F5 /* Arena_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arena_ChallengeUITests.swift; sourceTree = "<group>"; };
@@ -226,6 +230,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		A2AE36321E9ACBE30071EE19 /* Stubbed Responses */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE36351E9AD2680071EE19 /* PullRequests.json */,
+				A2AE36331E9ACC260071EE19 /* Repositories.json */,
+			);
+			path = "Stubbed Responses";
+			sourceTree = "<group>";
+		};
 		A2C7AD531E995B89009B26F5 = {
 			isa = PBXGroup;
 			children = (
@@ -251,10 +264,11 @@
 		A2C7AD5E1E995B89009B26F5 /* Arena Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				A2AE36261E9A0BED0071EE19 /* Helper */,
+				A2AE36321E9ACBE30071EE19 /* Stubbed Responses */,
 				A2AE36061E996C0A0071EE19 /* AppDelegate */,
 				A2AE36131E99A9290071EE19 /* Extensions */,
 				A2AE35FC1E9963DE0071EE19 /* GitHubAPI */,
+				A2AE36261E9A0BED0071EE19 /* Helper */,
 				A2AE36011E996A3E0071EE19 /* Model */,
 				A2AE35FF1E996A340071EE19 /* View */,
 				A2AE36001E996A390071EE19 /* ViewModel */,
@@ -269,7 +283,7 @@
 		A2C7AD731E995B89009B26F5 /* Arena ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A2C7AD741E995B89009B26F5 /* Arena_ChallengeTests.swift */,
+				A2AE362F1E9AA98C0071EE19 /* RepositoriesViewModelTests.swift */,
 				A2C7AD761E995B89009B26F5 /* Info.plist */,
 			);
 			path = "Arena ChallengeTests";
@@ -410,9 +424,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AE36341E9ACC260071EE19 /* Repositories.json in Resources */,
 				A2C7AD6A1E995B89009B26F5 /* LaunchScreen.storyboard in Resources */,
 				A2C7AD671E995B89009B26F5 /* Assets.xcassets in Resources */,
 				A2C7AD651E995B89009B26F5 /* Main.storyboard in Resources */,
+				A2AE36361E9AD2680071EE19 /* PullRequests.json in Resources */,
 				A2AE36211E9A09490071EE19 /* PullRequestTableViewCell.xib in Resources */,
 				A2AE360D1E9977F90071EE19 /* RepositoryTableViewCell.xib in Resources */,
 			);
@@ -603,7 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C7AD751E995B89009B26F5 /* Arena_ChallengeTests.swift in Sources */,
+				A2AE36301E9AA98C0071EE19 /* RepositoriesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

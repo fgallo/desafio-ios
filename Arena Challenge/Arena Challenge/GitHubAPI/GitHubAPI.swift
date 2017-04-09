@@ -58,8 +58,13 @@ extension GitHubAPI: TargetType {
     
     var sampleData: Data {
         switch self {
-        default:
-            return "Sample Data".data(using: .utf8)!
+            
+        case .PullRequests:
+            return stubbedResponse("PullRequests")
+            
+        case .Repositories:
+            return stubbedResponse("Repositories")
+            
         }
     }
     
@@ -92,8 +97,22 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
     }
 }
 
+func stubbedResponse(_ filename: String) -> Data! {
+    @objc class TestClass: NSObject { }
+    
+    let bundle = Bundle(for: TestClass.self)
+    let path = bundle.path(forResource: filename, ofType: "json")
+    return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
+}
+
 let GitHubProvider = RxMoyaProvider<GitHubAPI>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
 
+let GitHubProviderTest = RxMoyaProvider<GitHubAPI>(endpointClosure: { target in
+    return Endpoint(url: url(target), sampleResponseClosure: {.networkResponse(200, target.sampleData)})
+},
+                                                   requestClosure: MoyaProvider.defaultRequestMapping,
+                                                   stubClosure: MoyaProvider.immediatelyStub,
+                                                   plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
 
 // MARK: - Provider support
 

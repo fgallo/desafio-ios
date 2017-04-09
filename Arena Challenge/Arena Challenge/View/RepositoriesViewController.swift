@@ -92,11 +92,11 @@ class RepositoriesViewController: UIViewController {
 extension RepositoriesViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSections(in: tableView)
+        return viewModel.numberOfSectionsInTableView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.tableView(tableView, numberOfRowsInSection: section)
+        return viewModel.numberOfRowsInSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

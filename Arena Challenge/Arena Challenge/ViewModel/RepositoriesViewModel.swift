@@ -39,11 +39,11 @@ class RepositoriesViewModel {
     
     // MARK: - TableView
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView() -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfRowsInSection(_ section: Int) -> Int {
         return repositories.count
     }
     
@@ -79,7 +79,7 @@ class RepositoriesViewModel {
         }
     }
     
-    private func loadRepositories() -> Driver<[Repository]> {
+    func loadRepositories() -> Driver<[Repository]> {
         return provider
             .request(GitHubAPI.Repositories(language: "Java", sort: "stars", page: page))
             .trackActivity(activityIndicator)
