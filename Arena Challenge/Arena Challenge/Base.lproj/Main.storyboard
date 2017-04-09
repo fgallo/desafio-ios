@@ -60,16 +60,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-AC-fdm">
+                                <rect key="frame" x="80.5" y="128" width="213.5" height="38"/>
+                                <string key="text">Não existem pull requests para
+esse repositório.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="q5E-dc-meh" firstAttribute="leading" secondItem="W06-Yy-3uP" secondAttribute="leading" id="Eqb-rj-yen"/>
                             <constraint firstItem="dUg-uG-CbT" firstAttribute="top" secondItem="q5E-dc-meh" secondAttribute="bottom" id="WO5-7x-Nqg"/>
                             <constraint firstItem="q5E-dc-meh" firstAttribute="top" secondItem="W06-Yy-3uP" secondAttribute="top" id="fxS-lI-r2o"/>
+                            <constraint firstItem="0pI-AC-fdm" firstAttribute="centerX" secondItem="W06-Yy-3uP" secondAttribute="centerX" id="qha-2N-0dK"/>
                             <constraint firstAttribute="trailing" secondItem="q5E-dc-meh" secondAttribute="trailing" id="r0x-yk-xyj"/>
+                            <constraint firstItem="0pI-AC-fdm" firstAttribute="top" secondItem="nOT-S4-V55" secondAttribute="bottom" constant="64" id="yEF-LR-qA6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="messageLabel" destination="0pI-AC-fdm" id="0UJ-pS-pyv"/>
                         <outlet property="tableView" destination="q5E-dc-meh" id="97i-NF-QTD"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,7 @@ import RxSwift
 class RepositoryPullRequestsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageLabel: UILabel!
     
     private let progressHUD = MBProgressHUD()
     private let disposeBag = DisposeBag()
@@ -52,6 +53,8 @@ class RepositoryPullRequestsViewController: UIViewController {
     private func fetchPullRequests() {
         viewModel.fetchPullRequests()
             .drive(onNext: { pullRequests in
+                self.messageLabel.isHidden = !(pullRequests.count == 0)
+                self.tableView.isHidden = pullRequests.count == 0
                 self.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)

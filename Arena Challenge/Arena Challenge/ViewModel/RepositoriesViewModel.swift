@@ -58,12 +58,6 @@ class RepositoriesViewModel {
     
     // MARK: - API
     
-    func refreshRepositories() {
-        page = 1
-        repositories = []
-        allRepositoriesLoaded = false
-    }
-    
     func fetchRepositories(loadNextPageTrigger: Observable<Void>) -> Driver<[Repository]> {
         return recursivelyFetchRepositories(loadedSoFar: [], loadNextPageTrigger: loadNextPageTrigger)
     }
