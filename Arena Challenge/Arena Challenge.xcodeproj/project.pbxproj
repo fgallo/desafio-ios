@@ -33,6 +33,7 @@
 		A2AE36301E9AA98C0071EE19 /* RepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE362F1E9AA98C0071EE19 /* RepositoriesViewModelTests.swift */; };
 		A2AE36341E9ACC260071EE19 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AE36331E9ACC260071EE19 /* Repositories.json */; };
 		A2AE36361E9AD2680071EE19 /* PullRequests.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AE36351E9AD2680071EE19 /* PullRequests.json */; };
+		A2AE36381E9AD42B0071EE19 /* RepositoryPullRequestsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36371E9AD42B0071EE19 /* RepositoryPullRequestsViewModelTests.swift */; };
 		A2C7AD601E995B89009B26F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */; };
 		A2C7AD651E995B89009B26F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD631E995B89009B26F5 /* Main.storyboard */; };
 		A2C7AD671E995B89009B26F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD661E995B89009B26F5 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		A2AE362F1E9AA98C0071EE19 /* RepositoriesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelTests.swift; sourceTree = "<group>"; };
 		A2AE36331E9ACC260071EE19 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repositories.json; sourceTree = "<group>"; };
 		A2AE36351E9AD2680071EE19 /* PullRequests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PullRequests.json; sourceTree = "<group>"; };
+		A2AE36371E9AD42B0071EE19 /* RepositoryPullRequestsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryPullRequestsViewModelTests.swift; sourceTree = "<group>"; };
 		A2C7AD5C1E995B89009B26F5 /* Arena Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arena Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Arena Challenge/AppDelegate/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		A2C7AD641E995B89009B26F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		A2C7AD731E995B89009B26F5 /* Arena ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE36371E9AD42B0071EE19 /* RepositoryPullRequestsViewModelTests.swift */,
 				A2AE362F1E9AA98C0071EE19 /* RepositoriesViewModelTests.swift */,
 				A2C7AD761E995B89009B26F5 /* Info.plist */,
 			);
@@ -620,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AE36301E9AA98C0071EE19 /* RepositoriesViewModelTests.swift in Sources */,
+				A2AE36381E9AD42B0071EE19 /* RepositoryPullRequestsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

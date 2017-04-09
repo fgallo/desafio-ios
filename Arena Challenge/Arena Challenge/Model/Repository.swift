@@ -26,4 +26,13 @@ struct Repository: Mappable {
         description = map.optionalFrom("description")
     }
     
+    init(repositoryId: Int, name: String, description: String?, numberOfForks: Int, numberOfStars: Int, user: User) {
+        self.repositoryId = repositoryId
+        self.name = name
+        self.description = description
+        self.numberOfForks = numberOfForks
+        self.numberOfStars = numberOfStars
+        self.user = user
+    }
+    
 }

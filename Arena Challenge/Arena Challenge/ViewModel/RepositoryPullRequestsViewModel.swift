@@ -37,11 +37,11 @@ class RepositoryPullRequestsViewModel {
     
     // MARK: - TableView
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView() -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfRowsInSection(_ section: Int) -> Int {
         return pullRequests.count
     }
     

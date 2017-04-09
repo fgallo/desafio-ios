@@ -20,5 +20,11 @@ struct User: Mappable {
         try imageUrl = map.from("avatar_url")
     }
     
+    init(userId: Int, name: String, imageUrl: String) {
+        self.userId = userId
+        self.name = name
+        self.imageUrl = imageUrl
+    }
+    
 }
 
