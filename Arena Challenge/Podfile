@@ -4,6 +4,7 @@ target 'Arena Challenge' do
   use_frameworks!
 
   # Pods for Arena Challenge
+  pod 'MBProgressHUD'
   pod 'Moya/RxSwift'
   pod 'Moya-ModelMapper/RxSwift', '4.1.0'
   pod 'RxCocoa'

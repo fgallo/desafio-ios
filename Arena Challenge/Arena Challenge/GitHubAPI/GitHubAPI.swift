@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-let baseURL = URL(string: "https://api.github.com")
+let gitHubBaseURL = URL(string: "https://api.github.com")!
 
 enum GitHubAPI {
     case Repositories(language: String, sort: String, page: Int)
@@ -18,7 +18,7 @@ enum GitHubAPI {
 
 extension GitHubAPI: TargetType {
     
-    var baseURL: URL { return self.baseURL }
+    var baseURL: URL { return gitHubBaseURL }
     
     var path: String {
         
@@ -39,7 +39,7 @@ extension GitHubAPI: TargetType {
             
         case .Repositories(let language, let sort, let page):
             return [
-                "q=language": language,
+                "q": "language:" + language,
                 "sort": sort,
                 "page": page
             ]
