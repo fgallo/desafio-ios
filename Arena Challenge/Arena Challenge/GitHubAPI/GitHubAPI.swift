@@ -37,6 +37,11 @@ extension GitHubAPI: TargetType {
         
         switch self {
             
+        case .PullRequests:
+            return [
+                "state" : "all"
+            ]
+            
         case .Repositories(let language, let sort, let page):
             return [
                 "q": "language:" + language,
@@ -44,8 +49,6 @@ extension GitHubAPI: TargetType {
                 "page": page
             ]
             
-        default:
-            return nil
         }
     }
     
