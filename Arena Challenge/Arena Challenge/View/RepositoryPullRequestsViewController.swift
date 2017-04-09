@@ -90,6 +90,7 @@ extension RepositoryPullRequestsViewController: UITableViewDelegate {
         if let htmlURL = viewModel.pullRequestHtmlURLFor(indexPath: indexPath) {
             UIApplication.shared.openURL(htmlURL)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

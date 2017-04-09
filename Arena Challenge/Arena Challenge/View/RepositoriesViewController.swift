@@ -112,6 +112,7 @@ extension RepositoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: SegueIdentifiers.RepositoryPullRequestsViewController.rawValue, sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
