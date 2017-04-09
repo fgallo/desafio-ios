@@ -1,0 +1,28 @@
+{
+    "items" : [
+               {
+               "id" : 7508411,
+               "owner" : { "id" : 6407041, "login" : "ReactiveX", "avatar_url" : "https://avatars2.githubusercontent.com/u/6407041?v=3", },
+               "description" : "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.",
+               "name" : "RxJava",
+               "forks_count" : 4084,
+               "stargazers_count" : 23145,
+               },
+               {
+               "id" : 507775,
+               "owner" : { "id" : 6764390, "login" : "elastic", "avatar_url" : "https:\/\/avatars3.githubusercontent.com\/u\/6764390?v=3", },
+               "description" : "Open Source, Distributed, RESTful Search Engine",
+               "name" : "elasticsearch",
+               "forks_count" : 7274,
+               "stargazers_count" : 21920,
+               },
+               {
+               "id" : 892275,
+               "owner" : { "id" : 82592, "login" : "square", "avatar_url" : "https:\/\/avatars3.githubusercontent.com\/u\/82592?v=3", },
+               "description" : "Type-safe HTTP client for Android and Java by Square, Inc.",
+               "name" : "retrofit",
+               "forks_count" : 4209,
+               "stargazers_count" : 20314,
+               }
+               ]
+}
