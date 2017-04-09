@@ -51,6 +51,7 @@ class RepositoriesViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 120.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
     }
     
@@ -64,6 +65,7 @@ class RepositoriesViewController: UIViewController {
         viewModel.fetchRepositories(loadNextPageTrigger: loadNextPageTrigger)
             .drive(onNext: { repositories in
                 self.tableView.reloadData()
+                self.tableView.separatorStyle = .singleLine
             })
             .addDisposableTo(disposeBag)
     }

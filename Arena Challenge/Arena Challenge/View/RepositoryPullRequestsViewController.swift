@@ -47,15 +47,17 @@ class RepositoryPullRequestsViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 120.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: "PullRequestTableViewCell", bundle: nil), forCellReuseIdentifier: "PullRequestCell")
     }
     
     private func fetchPullRequests() {
         viewModel.fetchPullRequests()
             .drive(onNext: { pullRequests in
+                self.tableView.reloadData()
                 self.messageLabel.isHidden = !(pullRequests.count == 0)
                 self.tableView.isHidden = pullRequests.count == 0
-                self.tableView.reloadData()
+                self.tableView.separatorStyle = .singleLine
             })
             .addDisposableTo(disposeBag)
     }
