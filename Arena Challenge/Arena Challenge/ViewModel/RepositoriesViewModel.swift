@@ -44,8 +44,8 @@ class RepositoriesViewModel {
         return RepositoryCellViewModel(repository: repositories[indexPath.row])
     }
     
-    func repositoryFor(indexPath: IndexPath) -> Repository {
-        return repositories[indexPath.row]
+    func repositoryPullRequestViewModelFor(indexPath: IndexPath) -> RepositoryPullRequestsViewModel {
+        return RepositoryPullRequestsViewModel(provider: GitHubProvider, repository: repositories[indexPath.row])
     }
     
     

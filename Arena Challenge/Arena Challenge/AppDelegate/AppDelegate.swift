@@ -13,9 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         customizeAppearance()
+        
+        let repositoriesViewController = UIStoryboard.main.repositoriesViewController
+        let repositoriesViewModel = RepositoriesViewModel(provider: GitHubProvider)
+        repositoriesViewController.viewModel = repositoriesViewModel
+        let navigationController = UINavigationController(rootViewController: repositoriesViewController)
+        window?.rootViewController = navigationController
+        
         return true
     }
 

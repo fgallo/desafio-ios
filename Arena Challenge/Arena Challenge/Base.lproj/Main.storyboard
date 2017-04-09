@@ -12,7 +12,7 @@
         <!--Repositories View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RepositoriesViewController" customModule="Arena_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepositoriesViewController" id="BYZ-38-t0r" customClass="RepositoriesViewController" customModule="Arena_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,11 +37,45 @@
                     <navigationItem key="navigationItem" id="j0n-V7-E4i"/>
                     <connections>
                         <outlet property="tableView" destination="qf7-v0-jPm" id="wLJ-NY-QFs"/>
+                        <segue destination="8UC-Ry-gS3" kind="show" identifier="repositoryPullRequestsViewController" id="NQL-sW-Dbt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055.2" y="791.15442278860576"/>
+        </scene>
+        <!--Repository Pull Requests View Controller-->
+        <scene sceneID="xFc-sd-ruh">
+            <objects>
+                <viewController storyboardIdentifier="RepositoryPullRequestsViewController" id="8UC-Ry-gS3" customClass="RepositoryPullRequestsViewController" customModule="Arena_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nOT-S4-V55"/>
+                        <viewControllerLayoutGuide type="bottom" id="dUg-uG-CbT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W06-Yy-3uP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-dc-meh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q5E-dc-meh" firstAttribute="leading" secondItem="W06-Yy-3uP" secondAttribute="leading" id="Eqb-rj-yen"/>
+                            <constraint firstItem="dUg-uG-CbT" firstAttribute="top" secondItem="q5E-dc-meh" secondAttribute="bottom" id="WO5-7x-Nqg"/>
+                            <constraint firstItem="q5E-dc-meh" firstAttribute="top" secondItem="W06-Yy-3uP" secondAttribute="top" id="fxS-lI-r2o"/>
+                            <constraint firstAttribute="trailing" secondItem="q5E-dc-meh" secondAttribute="trailing" id="r0x-yk-xyj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="q5E-dc-meh" id="97i-NF-QTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsJ-eH-FbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.8" y="790.25487256371821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mc9-jo-CKy">

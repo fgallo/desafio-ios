@@ -20,6 +20,14 @@
 		A2AE36121E99A6A40071EE19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36111E99A6A40071EE19 /* User.swift */; };
 		A2AE36151E99A9460071EE19 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36141E99A9460071EE19 /* UIColorExtensions.swift */; };
 		A2AE36171E9A02B00071EE19 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36161E9A02B00071EE19 /* UIImageViewExtensions.swift */; };
+		A2AE36191E9A065B0071EE19 /* RepositoryPullRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36181E9A065B0071EE19 /* RepositoryPullRequestsViewController.swift */; };
+		A2AE361B1E9A06740071EE19 /* RepositoryPullRequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE361A1E9A06740071EE19 /* RepositoryPullRequestsViewModel.swift */; };
+		A2AE361D1E9A06B70071EE19 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE361C1E9A06B70071EE19 /* UIStoryboardExtensions.swift */; };
+		A2AE36201E9A09490071EE19 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE361E1E9A09490071EE19 /* PullRequestTableViewCell.swift */; };
+		A2AE36211E9A09490071EE19 /* PullRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2AE361F1E9A09490071EE19 /* PullRequestTableViewCell.xib */; };
+		A2AE36231E9A09650071EE19 /* PullRequestCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36221E9A09650071EE19 /* PullRequestCellViewModel.swift */; };
+		A2AE36251E9A09DD0071EE19 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36241E9A09DD0071EE19 /* PullRequest.swift */; };
+		A2AE36281E9A0C0B0071EE19 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE36271E9A0C0B0071EE19 /* SegueIdentifiers.swift */; };
 		A2C7AD601E995B89009B26F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */; };
 		A2C7AD651E995B89009B26F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD631E995B89009B26F5 /* Main.storyboard */; };
 		A2C7AD671E995B89009B26F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C7AD661E995B89009B26F5 /* Assets.xcassets */; };
@@ -62,6 +70,14 @@
 		A2AE36111E99A6A40071EE19 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A2AE36141E99A9460071EE19 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		A2AE36161E9A02B00071EE19 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		A2AE36181E9A065B0071EE19 /* RepositoryPullRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryPullRequestsViewController.swift; sourceTree = "<group>"; };
+		A2AE361A1E9A06740071EE19 /* RepositoryPullRequestsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryPullRequestsViewModel.swift; sourceTree = "<group>"; };
+		A2AE361C1E9A06B70071EE19 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		A2AE361E1E9A09490071EE19 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		A2AE361F1E9A09490071EE19 /* PullRequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullRequestTableViewCell.xib; sourceTree = "<group>"; };
+		A2AE36221E9A09650071EE19 /* PullRequestCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequestCellViewModel.swift; sourceTree = "<group>"; };
+		A2AE36241E9A09DD0071EE19 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		A2AE36271E9A0C0B0071EE19 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		A2C7AD5C1E995B89009B26F5 /* Arena Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arena Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C7AD5F1E995B89009B26F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Arena Challenge/AppDelegate/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		A2C7AD641E995B89009B26F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +149,7 @@
 			children = (
 				A2AE36091E9977D50071EE19 /* Cells */,
 				A2AE36021E996AD40071EE19 /* RepositoriesViewController.swift */,
+				A2AE36181E9A065B0071EE19 /* RepositoryPullRequestsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +159,7 @@
 			children = (
 				A2AE360E1E997F4F0071EE19 /* Cells */,
 				A2AE36041E996AE50071EE19 /* RepositoriesViewModel.swift */,
+				A2AE361A1E9A06740071EE19 /* RepositoryPullRequestsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +167,7 @@
 		A2AE36011E996A3E0071EE19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE36241E9A09DD0071EE19 /* PullRequest.swift */,
 				A2AE36071E9975B10071EE19 /* Repository.swift */,
 				A2AE36111E99A6A40071EE19 /* User.swift */,
 			);
@@ -166,6 +185,8 @@
 		A2AE36091E9977D50071EE19 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE361E1E9A09490071EE19 /* PullRequestTableViewCell.swift */,
+				A2AE361F1E9A09490071EE19 /* PullRequestTableViewCell.xib */,
 				A2AE360A1E9977F90071EE19 /* RepositoryTableViewCell.swift */,
 				A2AE360B1E9977F90071EE19 /* RepositoryTableViewCell.xib */,
 			);
@@ -175,6 +196,7 @@
 		A2AE360E1E997F4F0071EE19 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE36221E9A09650071EE19 /* PullRequestCellViewModel.swift */,
 				A2AE360F1E997FE70071EE19 /* RepositoryCellViewModel.swift */,
 			);
 			path = Cells;
@@ -185,8 +207,17 @@
 			children = (
 				A2AE36141E99A9460071EE19 /* UIColorExtensions.swift */,
 				A2AE36161E9A02B00071EE19 /* UIImageViewExtensions.swift */,
+				A2AE361C1E9A06B70071EE19 /* UIStoryboardExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A2AE36261E9A0BED0071EE19 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE36271E9A0C0B0071EE19 /* SegueIdentifiers.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A2C7AD531E995B89009B26F5 = {
@@ -214,6 +245,7 @@
 		A2C7AD5E1E995B89009B26F5 /* Arena Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE36261E9A0BED0071EE19 /* Helper */,
 				A2AE36061E996C0A0071EE19 /* AppDelegate */,
 				A2AE36131E99A9290071EE19 /* Extensions */,
 				A2AE35FC1E9963DE0071EE19 /* GitHubAPI */,
@@ -375,6 +407,7 @@
 				A2C7AD6A1E995B89009B26F5 /* LaunchScreen.storyboard in Resources */,
 				A2C7AD671E995B89009B26F5 /* Assets.xcassets in Resources */,
 				A2C7AD651E995B89009B26F5 /* Main.storyboard in Resources */,
+				A2AE36211E9A09490071EE19 /* PullRequestTableViewCell.xib in Resources */,
 				A2AE360D1E9977F90071EE19 /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,13 +572,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AE36151E99A9460071EE19 /* UIColorExtensions.swift in Sources */,
+				A2AE36191E9A065B0071EE19 /* RepositoryPullRequestsViewController.swift in Sources */,
+				A2AE36251E9A09DD0071EE19 /* PullRequest.swift in Sources */,
+				A2AE36201E9A09490071EE19 /* PullRequestTableViewCell.swift in Sources */,
 				A2AE36031E996AD40071EE19 /* RepositoriesViewController.swift in Sources */,
+				A2AE361D1E9A06B70071EE19 /* UIStoryboardExtensions.swift in Sources */,
+				A2AE36231E9A09650071EE19 /* PullRequestCellViewModel.swift in Sources */,
 				A2AE35FE1E9964440071EE19 /* GitHubAPI.swift in Sources */,
 				A2AE36081E9975B10071EE19 /* Repository.swift in Sources */,
 				A2AE360C1E9977F90071EE19 /* RepositoryTableViewCell.swift in Sources */,
 				A2AE36121E99A6A40071EE19 /* User.swift in Sources */,
+				A2AE36281E9A0C0B0071EE19 /* SegueIdentifiers.swift in Sources */,
 				A2AE36051E996AE50071EE19 /* RepositoriesViewModel.swift in Sources */,
 				A2AE36101E997FE70071EE19 /* RepositoryCellViewModel.swift in Sources */,
+				A2AE361B1E9A06740071EE19 /* RepositoryPullRequestsViewModel.swift in Sources */,
 				A2AE36171E9A02B00071EE19 /* UIImageViewExtensions.swift in Sources */,
 				A2C7AD601E995B89009B26F5 /* AppDelegate.swift in Sources */,
 			);

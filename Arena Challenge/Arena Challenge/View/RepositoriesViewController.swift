@@ -17,7 +17,7 @@ class RepositoriesViewController: UIViewController {
     private let startLoadingOffset: CGFloat = 20.0
     private let disposeBag = DisposeBag()
     
-    var viewModel: RepositoriesViewModel! = RepositoriesViewModel(provider: GitHubProvider)
+    var viewModel: RepositoriesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,10 @@ class RepositoriesViewController: UIViewController {
     
     private func setupView() {
         title = viewModel.title
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
     }
     
     private func setupTableView() {
@@ -65,11 +69,18 @@ class RepositoriesViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == SegueIdentifiers.RepositoryPullRequestsViewController.rawValue {
+            if let indexPath = sender as? IndexPath {
+                let repositoryPullRequestsViewController = segue.destination as! RepositoryPullRequestsViewController
+                repositoryPullRequestsViewController.viewModel = viewModel.repositoryPullRequestViewModelFor(indexPath: indexPath)
+            }
+        }
     }
     
 }
 
+
+// MARK: - UITableView DataSource and Delegate
 
 extension RepositoriesViewController: UITableViewDataSource {
     
@@ -93,7 +104,7 @@ extension RepositoriesViewController: UITableViewDataSource {
 extension RepositoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // perform segue
+        performSegue(withIdentifier: SegueIdentifiers.RepositoryPullRequestsViewController.rawValue, sender: indexPath)
     }
     
 }
