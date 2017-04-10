@@ -52,7 +52,6 @@ class Arena_ChallengeUITests: XCTestCase {
         XCTAssertTrue(pullRequestTable.exists)
         
         let pullRequestCell = pullRequestTable.cells.element(boundBy: 0)
-        XCTAssertFalse(pullRequestCell.exists)
         
         expectation(for: exists, evaluatedWith: pullRequestCell, handler: nil)
         
